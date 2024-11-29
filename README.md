@@ -1,16 +1,24 @@
-# crypto_test
-
-A new Flutter project.
+# Crypto Test
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Welcome to my assessment of the Crypto app.
 
-A few resources to get you started if this is your first Flutter project:
+This project uses **Riverpod** for state management and **GetIt** for dependency injection.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1. **Demo**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can download the demo from here:  
+[Demo Link](https://drive.google.com/file/d/1agCJvctOuzWchlI2Q76Ki9bXYcJRtMo_/view?usp=share_link)
+
+### 2. **APK Download**
+
+You can download the APK from here:  
+[APK Download](https://drive.google.com/file/d/1agCJvctOuzWchlI2Q76Ki9bXYcJRtMo_/view?usp=share_link)
+
+## Project Features
+
+- State management using **Riverpod**.
+- Dependency injection using **GetIt**.
+- Fully functional app with the ability to showcase key crypto-related features.
+- Network with Dio
