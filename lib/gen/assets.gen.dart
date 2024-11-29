@@ -66,6 +66,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_spend.svg
   SvgGenImage get iconSpend => const SvgGenImage('assets/icons/icon_spend.svg');
 
+  /// File path: assets/icons/icon_spinner.svg
+  SvgGenImage get iconSpinner =>
+      const SvgGenImage('assets/icons/icon_spinner.svg');
+
   /// File path: assets/icons/icon_tezos.svg
   SvgGenImage get iconTezos => const SvgGenImage('assets/icons/icon_tezos.svg');
 
@@ -93,6 +97,7 @@ class $AssetsIconsGen {
         iconSearch,
         iconSolana,
         iconSpend,
+        iconSpinner,
         iconTezos,
         iconVectorLeft,
         iconWallet

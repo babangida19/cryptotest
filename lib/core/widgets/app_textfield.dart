@@ -2,7 +2,6 @@ import 'package:crypto_test/core/theme/app_color.dart';
 import 'package:crypto_test/core/theme/app_textstyle.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,13 +10,11 @@ enum TextFieldType { email, password }
 class AppTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final String fieldName;
-  final bool isAutoFocus;
-  final List<TextInputFormatter>? formatters;
+
   final TextEditingController controller;
 
   final String? hintText;
   final bool obscureText;
-  final Function()? onTap;
 
   final Widget? suffixIcon;
 
@@ -28,14 +25,11 @@ class AppTextField extends StatelessWidget {
   const AppTextField({
     super.key,
     this.fieldName = "",
-    this.isAutoFocus = false,
     this.obscureText = false,
     this.validator,
     required this.controller,
     this.hintText,
-    this.onTap,
     this.suffixIcon,
-    this.formatters,
     this.onChanged,
     this.textFieldType = TextFieldType.email,
     this.autovalidateMode = AutovalidateMode.onUserInteraction,
@@ -66,7 +60,6 @@ class AppTextField extends StatelessWidget {
                       : TextCapitalization.sentences,
                   onChanged: onChanged,
                   autovalidateMode: autovalidateMode,
-                  inputFormatters: formatters,
                   controller: controller,
                   validator: validator,
                   obscureText: obscureText && showPassword.value,
@@ -89,7 +82,9 @@ class AppTextField extends StatelessWidget {
                     focusedBorder: outlineInputBorder,
                   ),
                   onEditingComplete: () {
-                    controller.text = controller.text.trim();
+                    if (textFieldType == TextFieldType.email) {
+                      controller.text = controller.text.trim();
+                    }
                   },
                 );
               }),
@@ -113,5 +108,3 @@ bool getShowPrefixIconPadding(
       return false;
   }
 }
-
-EdgeInsets prefixPadding = const EdgeInsets.only(left: 14, right: 11);

@@ -23,6 +23,7 @@ class BtcTransactionView extends ConsumerWidget {
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: TransactionView<BtcHashModel>(
             transaction: btcHashNotifier,
+            loadingMessage: "Fetching your {BTC} transactions",
             onSuccess: (btcHashModel) =>
                 BtcTransactionDetailCard(btcHashModel: btcHashModel),
           ),

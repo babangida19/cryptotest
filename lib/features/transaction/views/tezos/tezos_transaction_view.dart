@@ -21,6 +21,7 @@ class TezosTransactionView extends ConsumerWidget {
           appBar: const CustomAppBar(title: "Tezos"),
           body: TransactionView<List<TezosTransaction>>(
             transaction: tezosTransactions,
+            loadingMessage: "Fetching your {Tezos} transactions",
             onSuccess: (tezosTransactions) => ListView.builder(
               padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
               itemCount: tezosTransactions.length,

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:crypto_test/core/theme/app_color.dart';
 import 'package:crypto_test/core/theme/app_textstyle.dart';
 import 'package:crypto_test/core/validator.dart';
@@ -43,11 +45,12 @@ class LoginView extends HookWidget with Validators {
                         color: AppColor.black.withOpacity(0.6))),
                 const YMargin(24),
                 AppTextField(
-                    controller: emailController,
-                    hintText: "Enter your email",
-                    fieldName: "Email address",
-                    validator: emailValidator(),
-                    textFieldType: TextFieldType.email),
+                  controller: emailController,
+                  hintText: "Enter your email",
+                  fieldName: "Email address",
+                  validator: emailValidator(),
+                  // textFieldType: TextFieldType.email,
+                ),
                 AppTextField(
                   controller: passwordController,
                   hintText: "Enter password",

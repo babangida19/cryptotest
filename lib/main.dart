@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
                 appBarTheme: const AppBarTheme(
                     elevation: 0,
                     centerTitle: true,
-                    color: AppColor.white,
+                    scrolledUnderElevation: 0,
+                    backgroundColor: AppColor.white,
                     foregroundColor: AppColor.white),
                 scaffoldBackgroundColor: AppColor.white,
                 navigationBarTheme: NavigationBarThemeData(
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
                 useMaterial3: true,
                 textTheme: GoogleFonts.interTextTheme(),
               ),
+              debugShowCheckedModeBanner: false,
               home: const LoginView());
         });
   }

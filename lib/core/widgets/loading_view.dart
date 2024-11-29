@@ -1,7 +1,9 @@
 import 'package:crypto_test/core/theme/app_color.dart';
 import 'package:crypto_test/core/theme/app_textstyle.dart';
 import 'package:crypto_test/core/widgets/spacing.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoadingView extends StatelessWidget {
   final String loadingMessage;
@@ -15,8 +17,9 @@ class LoadingView extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const CircularProgressIndicator(
+            const SpinKitRing(
               color: AppColor.primary70,
+              size: 80.0,
             ),
             const YMargin(41),
             Text(
